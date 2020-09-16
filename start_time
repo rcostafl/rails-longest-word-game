@@ -1,0 +1,28 @@
+
+[1mFrom:[0m /home/rcostafl/code/rcostafl/rails-longest-word-game/app/controllers/games_controller.rb:26 GamesController#score:
+
+    [1;34m18[0m: [32mdef[0m [1;34mscore[0m
+    [1;34m19[0m:   @message = [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m
+    [1;34m20[0m:   word_is_valid = [1;36mtrue[0m
+    [1;34m21[0m: 
+    [1;34m22[0m:   word = params[[33m:word[0m]
+    [1;34m23[0m:   letters = params[[33m:letters[0m]
+    [1;34m24[0m:   start_time = params[[33m:start_time[0m]
+    [1;34m25[0m:   binding.pry
+ => [1;34m26[0m:   hash_word = generate_hash_count_letter_from_array(word.split([31m[1;31m'[0m[31m[1;31m'[0m[31m[0m))
+    [1;34m27[0m:   hash_letters = generate_hash_count_letter_from_array(letters.split([31m[1;31m'[0m[31m[1;31m'[0m[31m[0m))
+    [1;34m28[0m: 
+    [1;34m29[0m:   [1;34m# Check if the word use letters from the grid[0m
+    [1;34m30[0m:   [32munless[0m word_use_letters?(hash_word, hash_letters)
+    [1;34m31[0m:     word_is_valid = [1;36mfalse[0m
+    [1;34m32[0m:     @message = [31m[1;31m"[0m[31mSorry, but #{word}[0m[31m can't be built out of #{letters.split([1;31m'[0m[31m[1;31m'[0m[31m[0m[31m).join([1;31m'[0m[31m, [1;31m'[0m[31m[0m[31m)}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m33[0m:   [32melse[0m
+    [1;34m34[0m:     [32munless[0m typed_string_is_word?(word)
+    [1;34m35[0m:       word_is_valid = [1;36mfalse[0m
+    [1;34m36[0m:       @message = [31m[1;31m"[0m[31mSorry, but #{word.upcase}[0m[31m does not seem to be a valid English word...[1;31m"[0m[31m[0m
+    [1;34m37[0m:     [32melse[0m
+    [1;34m38[0m:       @message = [31m[1;31m"[0m[31mCongratulations! #{word.upcase}[0m[31m is a valid English word![1;31m"[0m[31m[0m
+    [1;34m39[0m:     [32mend[0m
+    [1;34m40[0m:   [32mend[0m
+    [1;34m41[0m: [32mend[0m
+
